@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Gantari&family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(backgrounds/1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    font-family: 'Poppins', sans-serif;
+    animation: load 1s;
+}
+
+main {				/*glavni okvir - box*/
+    border-radius: 10px;
+    background-color: rgba(12, 25, 39, .9);
+    padding: 50px;
+    margin-top: 50px;
+    margin-left: calc((100% - 880px) / 2);	/*880px*/
+    width: 850px;
+    box-shadow: none;
+}
+
+section#status {	/*slika u gornjem delu*/
+    padding: 10px;
+    text-align: center;
+    animation: zoom 2s infinite;
+}
+
+section#Slots {		/*spin kartice - okvir*/
+    border-radius: 10px;
+    padding: 30px 0;
+    background-color: rgba(12, 25, 39, .9);
+    border: 10px solid rgba(255, 255, 255, .4);
+    text-align: center;
+}
+
+section#ResetDugme {		/*dugme za resetovanje spina*/
+    margin-top: 10px;
+    padding: 10px 0;
+    border-radius: 5px;
+    text-align: center;
+    border: 1px dashed #C62828;
+    color: #FFFFFF;
+    font-size: 15px;
+    letter-spacing: .6px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: not-allowed;
+    transition: .2s;
+}
+
+section#SpinDugme {		/*dugme za pokretanje spina*/
+    margin-top: 10px;
+    padding: 20px 0;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #008b25;
+    border: 1px solid #008b25;
+    color: #FFFFFF;
+    font-size: 18px;
+    letter-spacing: .6px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: .2s;
+    animation: blinkikng 1.5s infinite;
+}
+
+.SpinDugmeDole {
+    color: #fff;
+    font-size: 11px;
+    font-weight: lighter;
+    font-style: italic;
+    margin-top: 5px;
+    letter-spacing: .2px;
+}
+
+section#options, section#options2 {		/*dugme za paljenje/gašenje zvuka i dugme za reset*/
+    display: inline-flex;
+    margin-top: 20px;
+    padding: 5px 20px;
+    border-radius: 5px;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: .2s;
+}
+
+section#options:hover {
+    filter: brightness(85%);
+}
+
+section#options .optiontext, section#options2 .optiontext {
+    margin: auto 0;
+    padding: auto 0;
+}
+
+.footer {       /*donji text - copyright*/
+    text-align: right;
+}
+
+.footer p {     /*donji text - copyright*/
+    color: #fff;
+    font-size: 10px;
+    font-weight: lighter;
+    letter-spacing: .5px;
+}
+
+#slot1, #slot2, #slot3, #slot4, #slot5, #slot6, #slot7 {    /*kartice*/
+    display: inline-block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 15px;
+    margin-right: 15px;
+    background-size: 80px;
+    width: 80px;
+    height: 80px;
+}
+
+.alogo { background-image: url("images/mt-logo.png");
+         animation: lightning 2s infinite;                }
+.a0 { background-image: url("numbers/0.png");         }
+.a1 { background-image: url("numbers/1.png");         }
+.a2 { background-image: url("numbers/2.png");         }
+.a3 { background-image: url("numbers/3.png");         }
+.a4 { background-image: url("numbers/4.png");         }
+.a5 { background-image: url("numbers/5.png");         }
+.a6 { background-image: url("numbers/6.png");         }
+.a7 { background-image: url("numbers/7.png");         }
+.a8 { background-image: url("numbers/8.png");         }
+.a9 { background-image: url("numbers/9.png");         }
+.a10 { background-image: url("numbers/10.png");       }
+.a11 { background-image: url("numbers/11.png");       }
+.a12 { background-image: url("numbers/12.png");       }
+.a13 { background-image: url("numbers/13.png");       }
+.a14 { background-image: url("numbers/14.png");       }
+.a15 { background-image: url("numbers/15.png");       }
+.a16 { background-image: url("numbers/16.png");       }
+.a17 { background-image: url("numbers/17.png");       }
+.a18 { background-image: url("numbers/18.png");       }
+.a19 { background-image: url("numbers/19.png");       }
+.a20 { background-image: url("numbers/20.png");       }
+.a21 { background-image: url("numbers/21.png");       }
+.a22 { background-image: url("numbers/22.png");       }
+.a23 { background-image: url("numbers/23.png");       }
+.a24 { background-image: url("numbers/24.png");       }
+.a25 { background-image: url("numbers/25.png");       }
+.a26 { background-image: url("numbers/26.png");       }
+.a27 { background-image: url("numbers/27.png");       }
+.a28 { background-image: url("numbers/28.png");       }
+.a29 { background-image: url("numbers/29.png");       }
+
+@keyframes load {
+    0% {
+        filter: blur(5px);
+        opacity: 0;
+    }
+    100% {
+        filter: none;
+        opacity: 1;
+    }
+}
+
+@keyframes zoom {
+    0% {
+        transform: none;
+    }
+    35% {
+        -webkit-transform: scale(1.07);
+        transform: scale(1.07);
+    }
+    100% {
+        transform: none;
+    }
+}
+
+@keyframes blinkikng {
+    0% {
+        box-shadow: none;
+        filter: none;
+        letter-spacing: .6px;
+        color: #fff;
+    }
+    50% {
+        box-shadow: 0 0 10px inset #fff000;
+        filter: grayscale(50%);
+        letter-spacing: 1.5px;
+        color: #fff000;
+    }
+    100% {
+        box-shadow: none;
+        filter: none;
+        letter-spacing: .6px;
+        color: #fff;
+    }
+}
+
+@keyframes lightning {
+    0% {
+        filter: none;
+    }
+    50% {
+        filter: drop-shadow(0 0 10px #008b25);
+    }
+    100% {
+        filter: none;
+    }
+}
