@@ -42,7 +42,7 @@
 
 		<div class="footer">
 			<p><strong>© BS Lutrija - Powered by: Moderator Team | 2022.</strong></p>
-			<p>Designed by: Stankovic</p>
+			<p>Organizator: Atanacković || Designed by: Stanković</p>
 		</div>
 	</main>
 
@@ -191,25 +191,8 @@
 			if (i7>=numeberSlot7){
 				coin[1].play()
 				clearInterval(slot7);
-				win.play();
-
-				SpinDugme.style.backgroundColor = "transparent";
-				SpinDugme.style.border = "1px dashed rgba(255, 255, 255, .4)";
-				SpinDugme.style.animation = "none";
-				SpinDugme.style.filter = "brightness(100%)";
-				SpinDugme.style.cursor = "not-allowed";
-				SpinDugme.innerHTML = "Izvučena su 7 broja! (0-29)";
-
-				ResetDugme.onclick = function() {resetSpin()};
-				ResetDugme.style.cursor = "pointer";
-				ResetDugme.style.backgroundColor = "#C62828";
-				ResetDugme.style.border = "1px solid #C62828";
-
-				Okvir.style.boxShadow = "0 0 20px #008b25";
-				Slots.style.borderColor = "#008b25";
-
 				doing = false;
-				return null;
+				dupliBroj();
 			}
 			slotTile = document.getElementById("slot7");
 			if (slotTile.className=="alogo"){
@@ -258,19 +241,72 @@
 		SpinDugme.innerHTML = "Započni novo izvlačenje";
 	}
 
+	function dupliBroj() {
+		var slot1 = document.getElementById("slot1").className
+		var slot2 = document.getElementById("slot2").className
+		var slot3 = document.getElementById("slot3").className
+		var slot4 = document.getElementById("slot4").className
+		var slot5 = document.getElementById("slot5").className
+		var slot6 = document.getElementById("slot6").className
+		var slot7 = document.getElementById("slot7").className
+
+		SpinDugme.style.backgroundColor = "transparent";
+		SpinDugme.style.border = "1px dashed rgba(255, 255, 255, .4)";
+		SpinDugme.style.animation = "none";
+		SpinDugme.style.filter = "brightness(100%)";
+		SpinDugme.style.cursor = "not-allowed";
+		SpinDugme.innerHTML = "Izvučena su 7 različita broja! (1-29)";
+
+		ResetDugme.onclick = function() {resetSpin()};
+		ResetDugme.style.cursor = "pointer";
+		ResetDugme.style.backgroundColor = "#C62828";
+		ResetDugme.style.border = "1px solid #C62828";
+
+		Okvir.style.boxShadow = "0 0 20px #008b25";
+		Slots.style.borderColor = "#008b25";
+		win.volume = 1;
+		win.play();
+
+		if ((slot1 == slot2) || (slot1 == slot3) || (slot1 == slot4) || (slot1 == slot5) || (slot1 == slot6) || (slot1 == slot7) ||
+			(slot2 == slot1) || (slot2 == slot3) || (slot2 == slot4) || (slot2 == slot5) || (slot2 == slot6) || (slot2 == slot7) ||
+			(slot3 == slot2) || (slot3 == slot4) || (slot3 == slot5) || (slot3 == slot6) || (slot3 == slot7) ||
+			(slot4 == slot3) || (slot4 == slot5) || (slot4 == slot6) || (slot4 == slot7) ||
+			(slot5 == slot4) || (slot5 == slot6) || (slot5 == slot7)
+			(slot6 == slot5) || (slot6 == slot7))
+		{
+			win.volume = 0;
+			lose.play();
+			doSlot();
+			SpinDugme.style.backgroundColor = "#ff9900";
+			SpinDugme.style.animation = "none";
+			SpinDugme.style.filter = "brightness(70%)";
+			SpinDugme.style.cursor = "not-allowed";
+			SpinDugme.style.border = "1px solid #ff9900";
+			SpinDugme.innerHTML = "Izvučeno je više istih brojeva, ponavljam izvlačenje...";
+
+			ResetDugme.onclick = null;
+			ResetDugme.style.cursor = "not-allowed";
+			ResetDugme.style.backgroundColor = "transparent";
+			ResetDugme.style.border = "1px dashed #C62828";
+
+			Okvir.style.boxShadow = "none";
+			Slots.style.borderColor = "rgba(255, 255, 255, .4)";
+		}
+	}
+
 	function toggleAudio(){
 		if (!audio){
 			zvuktext.innerHTML = "Zvuk uključen"
 			options.style.backgroundColor = "#3399ff"
 			audio = !audio;
 			for (var x of spin){
-				x.volume = 0.1;	//zvuk okretanja
+				x.volume = 0.06;	//zvuk okretanja
 			}
 			for (var x of coin){
-				x.volume = 0.2;	//zvuk kada stane okretanje "beep"
+				x.volume = 0.07;	//zvuk kada stane okretanje "beep"
 			}
-			win.volume = 0.7;
-			lose.volume = 0.1;
+			win.volume = 0.4;
+			lose.volume = 0.2;
 		}else{
 			zvuktext.innerHTML = "Zvuk isključen"
 			options.style.backgroundColor = "#C62828"

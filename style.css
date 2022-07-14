@@ -12,7 +12,7 @@ body {
     background-position: center center;
     background-attachment: fixed;
     font-family: 'Poppins', sans-serif;
-    animation: load 1s;
+    /*animation: wallpaper 40s infinite;*/
 }
 
 main {				/*glavni okvir - box*/
@@ -23,6 +23,7 @@ main {				/*glavni okvir - box*/
     margin-left: calc((100% - 880px) / 2);	/*880px*/
     width: 850px;
     box-shadow: none;
+    animation: load 1s;
 }
 
 section#status {	/*slika u gornjem delu*/
@@ -122,8 +123,7 @@ section#options .optiontext, section#options2 .optiontext {
 }
 
 .alogo { background-image: url("images/mt-logo.png");
-         animation: lightning 2s infinite;                }
-.a0 { background-image: url("numbers/0.png");         }
+         animation: lightning 2s infinite;            }
 .a1 { background-image: url("numbers/1.png");         }
 .a2 { background-image: url("numbers/2.png");         }
 .a3 { background-image: url("numbers/3.png");         }
@@ -210,3 +210,41 @@ section#options .optiontext, section#options2 .optiontext {
         filter: none;
     }
 }
+
+/*@keyframes wallpaper {
+    0% {
+        background-image: url(backgrounds/1.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+    }
+    25% {
+        background-image: url(backgrounds/2.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+    }
+    50% {
+        background-image: url(backgrounds/3.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+    }
+    75% {
+        background-image: url(backgrounds/4.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+    }
+    100% {
+        background-image: url(backgrounds/1.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+    }
+}*/
