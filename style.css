@@ -6,7 +6,7 @@
 }
 
 body {
-    background-image: url(backgrounds/1.jpg);
+    background-image: url(pozadine/2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -16,11 +16,12 @@ body {
 }
 
 main {				/*glavni okvir - box*/
+    z-index: 999;
     border-radius: 10px;
-    background-color: rgba(12, 25, 39, .9);
+    background-color: #0c1927; /*rgba(12, 25, 39, .9)*/
     padding: 50px;
     margin-top: 50px;
-    margin-left: calc((100% - 880px) / 2);	/*880px*/
+    margin-left: calc((100% - 950px) / 2);	/*880px -> 950px*/
     width: 850px;
     box-shadow: none;
     animation: load 1s;
@@ -122,37 +123,37 @@ section#options .optiontext, section#options2 .optiontext {
     height: 80px;
 }
 
-.alogo { background-image: url("images/mt-logo.png");
+.alogo { background-image: url("png-slike/mt-logo.png");
          animation: lightning 2s infinite;            }
-.a1 { background-image: url("numbers/1.png");         }
-.a2 { background-image: url("numbers/2.png");         }
-.a3 { background-image: url("numbers/3.png");         }
-.a4 { background-image: url("numbers/4.png");         }
-.a5 { background-image: url("numbers/5.png");         }
-.a6 { background-image: url("numbers/6.png");         }
-.a7 { background-image: url("numbers/7.png");         }
-.a8 { background-image: url("numbers/8.png");         }
-.a9 { background-image: url("numbers/9.png");         }
-.a10 { background-image: url("numbers/10.png");       }
-.a11 { background-image: url("numbers/11.png");       }
-.a12 { background-image: url("numbers/12.png");       }
-.a13 { background-image: url("numbers/13.png");       }
-.a14 { background-image: url("numbers/14.png");       }
-.a15 { background-image: url("numbers/15.png");       }
-.a16 { background-image: url("numbers/16.png");       }
-.a17 { background-image: url("numbers/17.png");       }
-.a18 { background-image: url("numbers/18.png");       }
-.a19 { background-image: url("numbers/19.png");       }
-.a20 { background-image: url("numbers/20.png");       }
-.a21 { background-image: url("numbers/21.png");       }
-.a22 { background-image: url("numbers/22.png");       }
-.a23 { background-image: url("numbers/23.png");       }
-.a24 { background-image: url("numbers/24.png");       }
-.a25 { background-image: url("numbers/25.png");       }
-.a26 { background-image: url("numbers/26.png");       }
-.a27 { background-image: url("numbers/27.png");       }
-.a28 { background-image: url("numbers/28.png");       }
-.a29 { background-image: url("numbers/29.png");       }
+.a1 { background-image: url("brojevi/1.png");         }
+.a2 { background-image: url("brojevi/2.png");         }
+.a3 { background-image: url("brojevi/3.png");         }
+.a4 { background-image: url("brojevi/4.png");         }
+.a5 { background-image: url("brojevi/5.png");         }
+.a6 { background-image: url("brojevi/6.png");         }
+.a7 { background-image: url("brojevi/7.png");         }
+.a8 { background-image: url("brojevi/8.png");         }
+.a9 { background-image: url("brojevi/9.png");         }
+.a10 { background-image: url("brojevi/10.png");       }
+.a11 { background-image: url("brojevi/11.png");       }
+.a12 { background-image: url("brojevi/12.png");       }
+.a13 { background-image: url("brojevi/13.png");       }
+.a14 { background-image: url("brojevi/14.png");       }
+.a15 { background-image: url("brojevi/15.png");       }
+.a16 { background-image: url("brojevi/16.png");       }
+.a17 { background-image: url("brojevi/17.png");       }
+.a18 { background-image: url("brojevi/18.png");       }
+.a19 { background-image: url("brojevi/19.png");       }
+.a20 { background-image: url("brojevi/20.png");       }
+.a21 { background-image: url("brojevi/21.png");       }
+.a22 { background-image: url("brojevi/22.png");       }
+.a23 { background-image: url("brojevi/23.png");       }
+.a24 { background-image: url("brojevi/24.png");       }
+.a25 { background-image: url("brojevi/25.png");       }
+.a26 { background-image: url("brojevi/26.png");       }
+.a27 { background-image: url("brojevi/27.png");       }
+.a28 { background-image: url("brojevi/28.png");       }
+.a29 { background-image: url("brojevi/29.png");       }
 
 @keyframes load {
     0% {
@@ -170,8 +171,8 @@ section#options .optiontext, section#options2 .optiontext {
         transform: none;
     }
     35% {
-        -webkit-transform: scale(1.07);
-        transform: scale(1.07);
+        -webkit-transform: scale(1.09);
+        transform: scale(1.09);
     }
     100% {
         transform: none;
@@ -213,35 +214,35 @@ section#options .optiontext, section#options2 .optiontext {
 
 /*@keyframes wallpaper {
     0% {
-        background-image: url(backgrounds/1.jpg);
+        background-image: url(pozadine/1.jpg);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
         background-attachment: fixed;
     }
     25% {
-        background-image: url(backgrounds/2.jpg);
+        background-image: url(pozadine/2.jpg);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
         background-attachment: fixed;
     }
     50% {
-        background-image: url(backgrounds/3.jpg);
+        background-image: url(pozadine/3.jpg);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
         background-attachment: fixed;
     }
     75% {
-        background-image: url(backgrounds/4.jpg);
+        background-image: url(pozadine/4.jpg);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
         background-attachment: fixed;
     }
     100% {
-        background-image: url(backgrounds/1.jpg);
+        background-image: url(pozadine/1.jpg);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;

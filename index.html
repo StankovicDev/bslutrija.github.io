@@ -5,7 +5,7 @@
 	<!-----| META TAGOVI, TAB |----->
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<link rel="shortcut icon" type="image/png" href="images/bs-logo.png">
+	<link rel="shortcut icon" type="image/png" href="png-slike/bs-logo.png">
 	<title>Balkan School - Lutrija</title>
 	<!--| CSS LINK |-->
 	<link rel="stylesheet" type="text/css" href="style.css">
@@ -19,7 +19,7 @@
 
 	<main id="Okvir">
 		<section id="status">
-			<img src="images/lutrija-logo.png">
+			<img src="png-slike/lutrija-logo.png">
 		</section>
 		<section id="Slots">
 			<div id="slot1" class="alogo"></div>
@@ -36,7 +36,7 @@
 		<p class="SpinDugmeDole">* Pre narednog izvlačenja resetujte kartice klikom na dugme <strong>"Resetuj kartice"</strong> nakon što se prethodno izvlačenje završi.</p>
 
 		<section id="options" onclick="toggleAudio()">
-			<img src="images/audioOn.png" id="audio"/>
+			<img src="png-slike/audioOn.png" id="audio"/>
 			<p id="zvuktext" class="optiontext"></p>
 		</section>
 
@@ -48,10 +48,10 @@
 
 	<script>
 	var doing = false;
-	var spin = [new Audio("sounds/spin.mp3"),new Audio("sounds/spin.mp3"),new Audio("sounds/spin.mp3"),new Audio("sounds/spin.mp3"),new Audio("sounds/spin.mp3"),new Audio("sounds/spin.mp3"),new Audio("sounds/spin.mp3")];
-	var coin = [new Audio("sounds/coin.mp3"),new Audio("sounds/coin.mp3"),new Audio("sounds/coin.mp3"),new Audio("sounds/coin.mp3"),new Audio("sounds/coin.mp3"),new Audio("sounds/coin.mp3"),new Audio("sounds/coin.mp3")];
-	var win = new Audio("sounds/win.mp3");
-	var lose = new Audio("sounds/lose.mp3");
+	var spin = [new Audio("zvukovi-mp3/spin.mp3"),new Audio("zvukovi-mp3/spin.mp3"),new Audio("zvukovi-mp3/spin.mp3"),new Audio("zvukovi-mp3/spin.mp3"),new Audio("zvukovi-mp3/spin.mp3"),new Audio("zvukovi-mp3/spin.mp3"),new Audio("zvukovi-mp3/spin.mp3")];
+	var coin = [new Audio("zvukovi-mp3/coin.mp3"),new Audio("zvukovi-mp3/coin.mp3"),new Audio("zvukovi-mp3/coin.mp3"),new Audio("zvukovi-mp3/coin.mp3"),new Audio("zvukovi-mp3/coin.mp3"),new Audio("zvukovi-mp3/coin.mp3"),new Audio("zvukovi-mp3/coin.mp3")];
+	var win = new Audio("zvukovi-mp3/win.mp3");
+	var lose = new Audio("zvukovi-mp3/lose.mp3");
 	var audio = false;
 
 	function doSlot(){
@@ -320,7 +320,7 @@
 			win.volume = 0;
 			lose.volume = 0;
 		}
-		document.getElementById("audio").src = "images/audio"+(audio?"On":"Off")+".png";
+		document.getElementById("audio").src = "png-slike/audio"+(audio?"On":"Off")+".png";
 	}
 
 	function randomInt(min, max){
